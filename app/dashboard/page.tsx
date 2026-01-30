@@ -7,8 +7,12 @@ import {
   PiggyBank,
   File,
   FileTextIcon,
+  Send,
+  FileText,
+  Shield,
 } from "lucide-react";
 import CurrentMoneySplitWidget from '@/components/CurrentMoneySplitWidget'
+import AllocationGrid from '@/components/AllocationGrid'
 import GoalProgress from "@/components/Dashboard/GoalProgress";
 import SplitBar from "@/components/Dashboard/SplitBar";
 import StatCard from "@/components/Dashboard/StatCard";
@@ -40,34 +44,30 @@ export default function Dashboard() {
           <StatCard
             title="Total Sent"
             value="$1,200"
-            detail1="+$300"
-            detail1Color="text-red-500"
-            detail2="+25%"
-            icon={Send}
-            showTrend={true}
+            change="+$300 (+25%)"
+            icon={<Send className="w-5 h-5" />}
+            trend="up"
           />
           <StatCard
             title="Savings"
             value="$360"
-            detail1="+$90"
-            detail1Color="text-red-500"
-            detail2="+33%"
-            icon={PiggyBank}
-            showTrend={true}
+            change="+$90 (+33%)"
+            icon={<PiggyBank className="w-5 h-5" />}
+            trend="up"
           />
           <StatCard
             title="Bills Paid"
             value="$180"
-            detail1="3 bills"
-            detail2="This month"
-            icon={FileText}
+            change="3 bills this month"
+            icon={<FileText className="w-5 h-5" />}
+            trend="neutral"
           />
           <StatCard
             title="Insurance"
             value="$60"
-            detail1="2 policies"
-            detail2="Active"
-            icon={Shield}
+            change="2 policies active"
+            icon={<Shield className="w-5 h-5" />}
+            trend="neutral"
           />
         </div>
 
@@ -75,6 +75,11 @@ export default function Dashboard() {
         {/* Money Split Visualization */}
         <div className="mb-8">
           <CurrentMoneySplitWidget />
+        </div>
+
+        {/* Allocation Category Cards */}
+        <div className="mb-8">
+          <AllocationGrid />
         </div>
 
         {/* Recent Transactions */}

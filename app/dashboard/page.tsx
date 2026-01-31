@@ -17,6 +17,7 @@ import StatCard from "@/components/Dashboard/StatCard";
 
 import SavingsByGoalWidget from "@/components/Dashboard/SavingsByGoalWidget";
 import TransactionHistoryItem, { Transaction } from "@/components/Dashboard/TransactionHistoryItem";
+import QuickActions from "@/components/Dashboard/QuickActions";
 
 
 import DashboardHeader from "@/components/Dashboard/DashboardHeader";
@@ -64,7 +65,11 @@ export default function Dashboard() {
           />
         </div>
 
-        {/* Money Split Visualization */}
+        {/* Quick Actions Panel */}
+        <div className="mb-8">
+          <QuickActions />
+        </div>
+
         {/* Money Split Visualization */}
         <div className="mb-8">
           <CurrentMoneySplitWidget />

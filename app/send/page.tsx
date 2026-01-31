@@ -33,15 +33,15 @@ export default function SendMoney() {
       <SendHeader />
 
       <main className="mx-auto px-4 sm:px-6 max-w-7xl lg:px-30 py-8">
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="flex-1 w-2/3">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="lg:flex-[2]">
             <RecipientAddressInput />
             <AmountCurrencySection />
-            {/* <EmergencyTransferCard
+            <EmergencyTransferCard
               onAction={() => setShowEmergencyModal(true)}
-            /> */}
+            />
           </div>
-          <div className="flex-1 w-1/3">
+          <div className="lg:flex-[1]">
             <AutomaticSplitCard />
           </div>
         </div>

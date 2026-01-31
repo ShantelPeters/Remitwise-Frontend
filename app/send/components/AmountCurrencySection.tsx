@@ -65,14 +65,14 @@ export default function AmountCurrencySection({ onPreview, onSend }: AmountCurre
   return (
     <div className="mx-auto bg-black rounded-2xl">
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Amount Card */}
         <div className="relative overflow-hidden rounded-2xl">
           {/* Gradient Glow */}
           <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-red-900/20 blur-[120px] rounded-full -mr-24 -mt-24 pointer-events-none z-0" />
 
           {/* Card Content */}
-          <div className="relative z-10 bg-zinc-900/50 rounded-2xl p-6 border border-zinc-800">
+          <div className="relative z-10 bg-zinc-900/50 rounded-2xl p-6 border border-zinc-800 ">
             <label className="text-sm font-medium mb-3 block">
               Amount (USD) <span className="text-red-500">*</span>
             </label>
@@ -122,7 +122,7 @@ export default function AmountCurrencySection({ onPreview, onSend }: AmountCurre
       </div>
 
       {/* Buttons */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <button
           onClick={handlePreview}
           disabled={!isValid}
